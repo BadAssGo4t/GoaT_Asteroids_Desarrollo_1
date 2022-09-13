@@ -1,0 +1,16 @@
+﻿  Game.cpp
+  Main.cpp
+C:\Users\Administrador\Desktop\GoaT_Asteroids_Desarrollo_1\Asteroids_Game\Game\ScreenMannager.h(2,10): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
+  Menu.cpp
+C:\Users\Administrador\Desktop\GoaT_Asteroids_Desarrollo_1\Asteroids_Game\Game\ScreenMannager.h(2,10): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
+  ScreenMannager.cpp
+C:\Users\Administrador\Desktop\GoaT_Asteroids_Desarrollo_1\Asteroids_Game\Game\ScreenMannager.h(2,10): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
+  Generando código...
+LINK : warning LNK4098: la biblioteca predeterminada'MSVCRT' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca
+raylib.lib(rcore.obj) : warning LNK4099: no se encontró PDB 'raylib.pdb' con 'raylib.lib(rcore.obj)' o en 'C:\Users\Administrador\Desktop\GoaT_Asteroids_Desarrollo_1\Asteroids_Game\bin\Win32\Debug\raylib.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+raylib.lib(rglfw.obj) : warning LNK4099: no se encontró PDB 'raylib.pdb' con 'raylib.lib(rglfw.obj)' o en 'C:\Users\Administrador\Desktop\GoaT_Asteroids_Desarrollo_1\Asteroids_Game\bin\Win32\Debug\raylib.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+raylib.lib(rshapes.obj) : warning LNK4099: no se encontró PDB 'raylib.pdb' con 'raylib.lib(rshapes.obj)' o en 'C:\Users\Administrador\Desktop\GoaT_Asteroids_Desarrollo_1\Asteroids_Game\bin\Win32\Debug\raylib.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+raylib.lib(rtext.obj) : warning LNK4099: no se encontró PDB 'raylib.pdb' con 'raylib.lib(rtext.obj)' o en 'C:\Users\Administrador\Desktop\GoaT_Asteroids_Desarrollo_1\Asteroids_Game\bin\Win32\Debug\raylib.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+raylib.lib(rtextures.obj) : warning LNK4099: no se encontró PDB 'raylib.pdb' con 'raylib.lib(rtextures.obj)' o en 'C:\Users\Administrador\Desktop\GoaT_Asteroids_Desarrollo_1\Asteroids_Game\bin\Win32\Debug\raylib.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+raylib.lib(utils.obj) : warning LNK4099: no se encontró PDB 'raylib.pdb' con 'raylib.lib(utils.obj)' o en 'C:\Users\Administrador\Desktop\GoaT_Asteroids_Desarrollo_1\Asteroids_Game\bin\Win32\Debug\raylib.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+  Game.vcxproj -> C:\Users\Administrador\Desktop\GoaT_Asteroids_Desarrollo_1\Asteroids_Game\bin\Win32\Debug\Game.exe
