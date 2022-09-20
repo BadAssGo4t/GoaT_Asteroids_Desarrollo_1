@@ -1,5 +1,6 @@
 #pragma once
-#include "raylib.h";
+#include <iostream>
+#include "raylib.h"
 #include "Menu.h"
 #include "Game.h"
 void screenMannager();
