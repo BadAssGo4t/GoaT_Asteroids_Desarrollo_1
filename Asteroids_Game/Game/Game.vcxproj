@@ -155,9 +155,6 @@
     <ClInclude Include="Menu.h" />
     <ClInclude Include="ScreenMannager.h" />
   </ItemGroup>
-  <ItemGroup>
-    <Image Include="..\Resources\Button\Play-Bttn.png" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

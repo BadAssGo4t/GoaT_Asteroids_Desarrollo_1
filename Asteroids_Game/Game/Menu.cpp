@@ -15,14 +15,21 @@ typedef struct   Button
 int Menu(void)
 {
     // Init
-    const int screenWidth = 800;
-    const int screenHeight = 650;
+    const int screenWidth = 600;
+    const int screenHeight = 800;
 
     InitWindow(screenWidth, screenHeight, "Menu");
 
     static Play play;
     static Controls controls;
     static Credits credits;
+
+    //parallax
+    Texture2D background = LoadTexture ("../Resources/Dynamic Space Background/Nebula Blue.png");
+    Texture2D stars = LoadTexture("../Resources/Dynamic Space Background/Stars-Big_1_1_PC.png");
+
+    float scrollingBack   = 0.0f;
+    float scrollingStars  = 0.0f;
 
     // PLay Button
     play.button = LoadTexture("../Resources/Button/Play-Bttn.png");
@@ -63,6 +70,12 @@ int Menu(void)
         play.btnAction = false;
         controls.btnAction = false;
         credits.btnAction = false;
+
+        scrollingBack  -= 0.5f;
+        scrollingStars -= 0.9f;
+
+        if (scrollingBack <= -background.width * 2) scrollingBack = 0; 
+        if (scrollingStars <= -stars.width * 2) scrollingStars = 0;
 
         // Check button state
         if (CheckCollisionPointRec(mousePoint, play.btnBounds))
@@ -118,8 +131,17 @@ int Menu(void)
 
         BeginDrawing();
 
-        ClearBackground(LIGHTGRAY);
-        DrawText("Asteroids", screenWidth / 2 - MeasureText("Asteroids", 40), 40, 80, BLACK);
+        ClearBackground(GetColor(0x052c46ff));
+
+
+
+        DrawTextureEx(background, Vector2{ scrollingBack, 20 }, 0.0f, 2.0f, WHITE);
+        DrawTextureEx(background, Vector2{ background.width*2 + scrollingBack, 20 }, 0.0f, 2.0f, WHITE);
+
+        DrawTextureEx(stars, Vector2 { scrollingStars, 20 }, 0.0f, 2.0f, WHITE);
+        DrawTextureEx(stars, Vector2 { stars.width * 2 + scrollingStars, 20 }, 0.0f, 2.0f, WHITE);
+
+        DrawText("Asteroids", screenWidth / 2 - MeasureText("Asteroids", 40), 40, 80, LIGHTGRAY);
 
         DrawTextureRec(play.button, play.sourceRec, Vector2{ play.btnBounds.x, play.btnBounds.y }, WHITE); 
         DrawTextureRec(controls.button, controls.sourceRec, Vector2{ controls.btnBounds.x, controls.btnBounds.y }, WHITE);
@@ -131,6 +153,8 @@ int Menu(void)
     UnloadTexture(play.button);
     UnloadTexture(controls.button);
     UnloadTexture(credits.button);
+    UnloadTexture(background);
+    UnloadTexture(stars);
     CloseWindow();
 
     return 0;
