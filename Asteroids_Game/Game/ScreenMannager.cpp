@@ -8,7 +8,7 @@ void screenMannager()
 
 /*
 
-using namespace Flappy;
+using namespace Asteroids;
 using namespace Gameplay;
 using namespace intext;
 
@@ -25,23 +25,17 @@ namespace Asteroids {
 		int screenWidth = 900;
 		int screenHeight = 600;
 
-		Rectangle retry;
-		Rectangle menu;
-
-
-		Vector2 mause;
-
 
 
 		int ScreenManager()
 		{
-			InitWindow(screenWidth, screenHeight, "PONG");
+			InitWindow(screenWidth, screenHeight, "Asteroids");
 
 			intext::LoadTexture();
-			Gameplay::InitGameplay();
-			Menu::InitMenu();
-			Controls::initControls();
-			Credits::InitCredits();
+			Gameplay::Gameplay();
+			Menu::Menu();
+			Controls::Controls();
+			Credits::Credits();
 			Gameplay::UpdateGame();
 
 			while (!WindowShouldClose())
@@ -49,27 +43,27 @@ namespace Asteroids {
 				Change();
 			}
 
-CloseAudioDevice();
-CloseWindow();
-return 0;
-		} // SCreen MANAGER
-
-
+        CloseAudioDevice();
+        CloseWindow();
+        return 0;
+		} 
+		
+		// SCreen MANAGER
 
 		static void Change() {
 			switch (Screens) {
 			case Menu: {
-				Menu::UpdateMenu();
+				Menu::Menu();
 
 			} break;
 			case Game: {
-				Gameplay::UpdateGame();
+				Gameplay:Game();
 			} break;
 			case Controls: {
-				Controls::UpdateControls();
+				Controls::Controls();
 			} break;
 			case Credits: {
-				Credits::UpdateCredits();
+				Credits::Credits();
 			}
 			}
 

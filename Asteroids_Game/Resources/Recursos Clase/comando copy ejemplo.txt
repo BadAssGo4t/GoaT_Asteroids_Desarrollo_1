@@ -1,0 +1,1 @@
+C:\> copy C:\Users\Administrador\Desktop\GoaT_Asteroids_Desarrollo_1\Asteroids_Game\Resources\Nave\ship.pnj C:<Carpeta destino en donde se encuentra el Exe>
