@@ -21,5 +21,5 @@
 *.app
 
 # Folders	
-* .bin/
-* .obj/
+bin/
+obj/
